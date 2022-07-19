@@ -1,28 +1,40 @@
 import React, { useEffect } from "react";
-import { Tabs } from "antd";
 import ApiKeys from "../components/ApiKeys";
 import { connect, useDispatch } from "react-redux";
 import { fetchUser } from "../redux/actions/userAction";
-const { TabPane } = Tabs;
+import { Navbar } from "../components/Navbar";
+import Profile from "../components/Profile";
+import AvailableApis from "../components/AvailableApis";
 
 function Dashboard(props) {
-  console.log(props)
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchUser());
-  },[]);
+  }, []);
   return (
-    <div>
-      <h1>You</h1>
-      <ApiKeys keys ={props.apikeys}  />
-    </div>
+    <>
+      <Navbar active_path="/dashboard" />
+      <div className="w-full max-w-6xl ml-auto mr-auto mt-10 dashboard">
+        {props.userData.email ? (
+          <div className="flex justify-between p-20 bg-white rounded-md profile-keys">
+            <ApiKeys keys={props.apikeys} />
+            <Profile userData={props.userData}/>
+          </div>
+        ) : (
+          <h2>Loading............</h2>
+        )}
+        <AvailableApis />
+      </div>
+    </>
   );
 }
 
 const mapStateProps = (state) => {
-    console.log('mpos',state)
-    const {userData}  = state.user;
-    return{apikeys: userData ? userData.apiKeys : []}; 
-}
+  const { userData } = state.user;
+  return {
+    apikeys: userData ? userData.apiKeys : [],
+    userData: userData ? userData : {},
+  };
+};
 
-export default connect(mapStateProps)(Dashboard)
+export default connect(mapStateProps)(Dashboard);

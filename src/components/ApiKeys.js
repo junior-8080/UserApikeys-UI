@@ -6,7 +6,7 @@ function ApiKeys({keys}) {
   const apiKeys = keys.map(item => <ApiKey apiKey ={item.key} />)
   return (
     <div>
-     <h1>API Keys</h1>
+     <h1 className='text-center'>API Key</h1>
       {
        apiKeys
       }

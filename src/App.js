@@ -15,7 +15,7 @@ function App() {
 
   const user =  useSelector(selectLogin);
   return (
-    <div className="App h-full   sm:h-screen">
+    <div>
       <Routes>
          <Route path='/'   element={<Auth />}  />
          <Route path='/dashboard' element={<ProtectedRoutes children={<Dashboard />} />} />

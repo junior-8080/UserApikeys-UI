@@ -29,7 +29,14 @@ export const accountDetails = (payload) => {
   };
 };
 
-const  openNotification = (message) => {
+export const logoutSuccess = () => {
+  return {
+    type:"LOGOUT",
+    payload:{}
+  }
+}
+
+export const openNotification = (message) => {
   notification.open({
     message: message,
   });
@@ -42,12 +49,15 @@ export function userSigin(data) {
         url: config.apiBaseUrl + "/login",
         method: "POST",
         data: data,
-        withCredentials: true 
+        withCredentials: true,
       });
       dispatch(loginSuccess());
-      openNotification("Invalid Email or Password");
     } catch (error) {
-      console.log(error);
+      if (error.response.status === 404) {
+        openNotification("Invalid Email or Password");
+      } else {
+        openNotification("Something  went wrong");
+      }
     }
   };
 }
@@ -55,18 +65,20 @@ export function userSigin(data) {
 export function userSigup(data) {
   return async (dispatch, getState) => {
     try {
-      const result = await axios({
-        url: config.apiBaseUrl,
+      const response = await axios({
+        url: config.apiBaseUrl + '/signup',
         method: "POST",
-        data: JSON.stringify(data),
-        withCredentials:true
+        data: data,
+        withCredentials: true,
       });
-      if (result.statusCode === 200 && result.statusCode) {
-        dispatch(loginSuccess());
+      if (response.status === 200 && response.data.status) {
+        const payload = {
+          email: data.email,
+          password: data.password
+        }
+        dispatch(userSigin(payload));
       }
-      alert("Sign up successful");
     } catch (error) {
-      console.log(error);
       const statusCode = error.statusCode;
       if (statusCode === 401 && message === "Invalid email or password") {
         openNotification("Invalid Email or Password");
@@ -81,10 +93,9 @@ export function fetchUser(data) {
       const result = await axios({
         url: config.apiBaseUrl + "/account",
         method: "GET",
-        withCredentials:true
+        withCredentials: true,
       });
       dispatch(accountDetails(result.data.data));
-      alert("Sign up successful");
     } catch (error) {
       console.log(error);
     }

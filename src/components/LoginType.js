@@ -7,7 +7,7 @@ import React from 'react'
 
 export const LoginType = (props) => {
   return(
-    <button className='p-1 border-2 broder-black-600 mr-2 my-2' disabled={props.notAvailable}>
+    <button className='p-1 border-2 broder-black-600 mr-2 my-2 text-white' disabled={props.notAvailable}>
         <i className={props.icon}/>{" "}{props.text}
     </button>
    )

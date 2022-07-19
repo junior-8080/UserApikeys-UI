@@ -19,21 +19,17 @@ const Auth = (props) => {
    return <Navigate to="/dashboard"  />
   }
   return (
-    <div className="h-full">
-      <Navbar />
-      <div className="bg-white w-4/5 mt-2 mr-auto ml-auto rounded-md flex justify-center py-2 sm:w-1/3 sm:mt-24 sm:py-5">
-      <div className="w-4/5">
-        <h2 className="text-2xl font-bold text-center p-2">Account Login</h2>
-        <p className="text-center hidden sm:block">Hey{" "}🙂<br/>Enter your details to get sign in to <br/>your account</p>
+    <div>
+      <Navbar active_path="/" />
+      <div className="bg-white w-1/3 mr-auto ml-auto text-center py-5 rounded-md mt-24 auth">
+        <h2 className="text-2xl font-bold text-white">Account Login</h2>
+        <p className="text-white">Hey{" "}🙂<br/>Enter your details to get sign in to <br/>your account</p>
         {authState === 'login' ? <SignInForm /> : <SignUpForm />}
         {authState === 'login'? <div>
-          <p className="p-2 text-center">--Or Sign in with--</p>
-          <div className="text-center">
-             {loginModes}
-          </div>
-          <p className="text-center">Dont have an account?{" "}<button onClick={() => setAuthState('signin')} className="register-now text-accent3">Request Now</button></p>
-        </div>: <p className="register-now mt-4 text-accent3 text-center cursor-pointer" onClick={() => setAuthState('login')}>Login</p>}
-      </div>
+          <p className="p-2 text-white">--Or Sign in with--</p>
+          {loginModes}
+          <p className="text-white">Dont have an account?{" "}<button onClick={() => setAuthState('signin')} className="register-now text-accent3">Request Now</button></p>
+        </div>:<p className="text-white">Dont have an account?{" "}<button className="register-now mt-4 text-accent3" onClick={() => setAuthState('login')}>Login</button></p> }
       </div>
     </div>
   );

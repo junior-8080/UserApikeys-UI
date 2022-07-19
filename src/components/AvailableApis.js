@@ -1,0 +1,56 @@
+import React from "react";
+import AvailableApiCard from "./AvailableApiCard";
+
+export default function AvailableApis() {
+  const mockApis = [{
+    "name": "Voyatouch",
+    "summary": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\n",
+    "docs": "https://google.de/mi/pede/malesuada/in/imperdiet/et/commodo.jpg?ut=ipsum&ultrices=praesent&vel=blandit&augue=lacinia&vestibulum=erat&ante=vestibulum&ipsum=sed&primis=magna&in=at&faucibus=nunc&orci=commodo&luctus=placerat&et=praesent&ultrices=blandit&posuere=nam&cubilia=nulla&curae=integer&donec=pede&pharetra=justo&magna=lacinia&vestibulum=eget&aliquet=tincidunt&ultrices=eget&erat=tempus&tortor=vel&sollicitudin=pede&mi=morbi&sit=porttitor&amet=lorem&lobortis=id&sapien=ligula&sapien=suspendisse&non=ornare&mi=consequat&integer=lectus&ac=in&neque=est&duis=risus&bibendum=auctor&morbi=sed&non=tristique&quam=in&nec=tempus&dui=sit&luctus=amet&rutrum=sem&nulla=fusce&tellus=consequat&in=nulla&sagittis=nisl&dui=nunc&vel=nisl&nisl=duis&duis=bibendum&ac=felis&nibh=sed&fusce=interdum&lacus=venenatis&purus=turpis&aliquet=enim&at=blandit&feugiat=mi&non=in&pretium=porttitor&quis=pede"
+  }, {
+    "name": "Zoolab",
+    "summary": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. .",
+    "docs": "https://ucoz.ru/justo/lacinia/eget/tincidunt/eget.json?augue=pretium&aliquam=quis&erat=lectus&volutpat=suspendisse&in=potenti&congue=in&etiam=eleifend&justo=quam&etiam=a&pretium=odio&iaculis=in&justo=hac&in=habitasse&hac=platea&habitasse=dictumst&platea=maecenas&dictumst=ut&etiam=massa&faucibus=quis&cursus=augue&urna=luctus&ut=tincidunt&tellus=nulla&nulla=mollis&ut=molestie&erat=lorem&id=quisque&mauris=ut&vulputate=erat&elementum=curabitur&nullam=gravida&varius=nisi&nulla=at&facilisi=nibh&cras=in&non=hac&velit=habitasse&nec=platea&nisi=dictumst&vulputate=aliquam&nonummy=augue&maecenas=quam&tincidunt=sollicitudin&lacus=vitae&at=consectetuer&velit=eget&vivamus=rutrum&vel=at&nulla=lorem&eget=integer&eros=tincidunt&elementum=ante&pellentesque=vel&quisque=ipsum&porta=praesent&volutpat=blandit&erat=lacinia&quisque=erat&erat=vestibulum&eros=sed&viverra=magna&eget=at&congue=nunc&eget=commodo&semper=placerat&rutrum=praesent&nulla=blandit&nunc=nam&purus=nulla&phasellus=integer&in=pede&felis=justo&donec=lacinia&semper=eget&sapien=tincidunt&a=eget&libero=tempus&nam=vel&dui=pede&proin=morbi&leo=porttitor&odio=lorem&porttitor=id&id=ligula&consequat=suspendisse&in=ornare&consequat=consequat&ut=lectus&nulla=in&sed=est&accumsan=risus&felis=auctor&ut=sed&at=tristique&dolor=in"
+  }, {
+    "name": "Tampflex",
+    "summary": "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
+    "docs": "http://wiley.com/lacinia/aenean.jsp?vestibulum=morbi&velit=sem&id=mauris&pretium=laoreet&iaculis=ut&diam=rhoncus&erat=aliquet&fermentum=pulvinar&justo=sed&nec=nisl&condimentum=nunc&neque=rhoncus&sapien=dui&placerat=vel&ante=sem&nulla=sed&justo=sagittis&aliquam=nam&quis=congue&turpis=risus&eget=semper&elit=porta&sodales=volutpat&scelerisque=quam&mauris=pede&sit=lobortis&amet=ligula&eros=sit&suspendisse=amet&accumsan=eleifend&tortor=pede&quis=libero&turpis=quis&sed=orci&ante=nullam&vivamus=molestie&tortor=nibh&duis=in&mattis=lectus&egestas=pellentesque&metus=at&aenean=nulla&fermentum=suspendisse&donec=potenti&ut=cras&mauris=in&eget=purus&massa=eu&tempor=magna&convallis=vulputate&nulla=luctus&neque=cum&libero=sociis&convallis=natoque&eget=penatibus&eleifend=et&luctus=magnis&ultricies=dis&eu=parturient&nibh=montes&quisque=nascetur&id=ridiculus&justo=mus&sit=vivamus&amet=vestibulum&sapien=sagittis&dignissim=sapien"
+  }, {
+    "name": "Wrapsafe",
+    "summary": "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
+    "docs": "https://netscape.com/amet/cursus/id/turpis.html?duis=pretium&mattis=nisl&egestas=ut&metus=volutpat&aenean=sapien&fermentum=arcu&donec=sed&ut=augue&mauris=aliquam&eget=erat&massa=volutpat&tempor=in&convallis=congue&nulla=etiam&neque=justo&libero=etiam&convallis=pretium&eget=iaculis"
+  }, {
+    "name": "Latlux",
+    "summary": "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.\n\nCras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
+    "docs": "https://umich.edu/sit/amet/nulla/quisque/arcu.jpg?molestie=pede&lorem=venenatis&quisque=non&ut=sodales&erat=sed&curabitur=tincidunt&gravida=eu&nisi=felis&at=fusce&nibh=posuere&in=felis&hac=sed&habitasse=lacus&platea=morbi&dictumst=sem&aliquam=mauris&augue=laoreet&quam=ut&sollicitudin=rhoncus&vitae=aliquet&consectetuer=pulvinar&eget=sed&rutrum=nisl&at=nunc&lorem=rhoncus&integer=dui&tincidunt=vel&ante=sem&vel=sed&ipsum=sagittis&praesent=nam&blandit=congue&lacinia=risus&erat=semper&vestibulum=porta&sed=volutpat&magna=quam&at=pede&nunc=lobortis&commodo=ligula&placerat=sit&praesent=amet&blandit=eleifend&nam=pede&nulla=libero&integer=quis&pede=orci&justo=nullam&lacinia=molestie&eget=nibh&tincidunt=in&eget=lectus&tempus=pellentesque&vel=at&pede=nulla"
+  }, {
+    "name": "Y-find",
+    "summary": "Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.",
+    "docs": "https://yale.edu/rhoncus/aliquam.html?lobortis=donec&sapien=dapibus&sapien=duis&non=at&mi=velit&integer=eu&ac=est&neque=congue&duis=elementum&bibendum=in&morbi=hac&non=habitasse&quam=platea&nec=dictumst&dui=morbi&luctus=vestibulum&rutrum=velit&nulla=id&tellus=pretium&in=iaculis&sagittis=diam&dui=erat&vel=fermentum&nisl=justo&duis=nec&ac=condimentum&nibh=neque&fusce=sapien&lacus=placerat&purus=ante&aliquet=nulla&at=justo&feugiat=aliquam&non=quis&pretium=turpis&quis=eget&lectus=elit&suspendisse=sodales&potenti=scelerisque&in=mauris&eleifend=sit&quam=amet&a=eros&odio=suspendisse&in=accumsan&hac=tortor&habitasse=quis&platea=turpis&dictumst=sed&maecenas=ante&ut=vivamus&massa=tortor&quis=duis&augue=mattis&luctus=egestas&tincidunt=metus&nulla=aenean&mollis=fermentum&molestie=donec&lorem=ut"
+  }, {
+    "name": "Redhold",
+    "summary": "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
+    "docs": "http://salon.com/risus/praesent/lectus.xml?mi=phasellus&pede=id&malesuada=sapien&in=in&imperdiet=sapien&et=iaculis&commodo=congue&vulputate=vivamus&justo=metus&in=arcu&blandit=adipiscing&ultrices=molestie&enim=hendrerit&lorem=at&ipsum=vulputate&dolor=vitae&sit=nisl&amet=aenean&consectetuer=lectus&adipiscing=pellentesque&elit=eget&proin=nunc&interdum=donec&mauris=quis&non=orci&ligula=eget&pellentesque=orci&ultrices=vehicula&phasellus=condimentum&id=curabitur&sapien=in&in=libero&sapien=ut&iaculis=massa&congue=volutpat"
+  }, {
+    "name": "Kanlam",
+    "summary": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
+    "docs": "http://ebay.com/est/quam/pharetra/magna/ac/consequat.png?massa=sem&id=fusce&lobortis=consequat&convallis=nulla&tortor=nisl&risus=nunc&dapibus=nisl&augue=duis&vel=bibendum&accumsan=felis&tellus=sed&nisi=interdum&eu=venenatis&orci=turpis&mauris=enim&lacinia=blandit&sapien=mi&quis=in&libero=porttitor&nullam=pede&sit=justo&amet=eu&turpis=massa&elementum=donec&ligula=dapibus&vehicula=duis"
+  }, {
+    "name": "Tres-Zap",
+    "summary": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin",
+    "docs": "http://earthlink.net/erat/nulla.json?donec=semper&odio=sapien&justo=a&sollicitudin=libero&ut=nam&suscipit=dui&a=proin&feugiat=leo&et=odio&eros=porttitor&vestibulum=id&ac=consequat&est=in&lacinia=consequat&nisi=ut&venenatis=nulla"
+  }, {
+    "name": "Y-Solowarm",
+    "summary": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede.",
+    "docs": "https://ca.gov/morbi/ut/odio.png?consectetuer=proin&adipiscing=eu&elit=mi&proin=nulla&risus=ac&praesent=enim&lectus=in&vestibulum=tempor&quam=turpis&sapien=nec&varius=euismod&ut=scelerisque&blandit=quam&non=turpis&interdum=adipiscing&in=lorem&ante=vitae&vestibulum=mattis&ante=nibh&ipsum=ligula&primis=nec&in=sem&faucibus=duis&orci=aliquam&luctus=convallis&et=nunc&ultrices=proin&posuere=at&cubilia=turpis&curae=a&duis=pede&faucibus=posuere&accumsan=nonummy&odio=integer&curabitur=non&convallis=velit&duis=donec&consequat=diam&dui=neque&nec=vestibulum&nisi=eget&volutpat=vulputate&eleifend=ut&donec=ultrices&ut=vel&dolor=augue&morbi=vestibulum&vel=ante&lectus=ipsum&in=primis&quam=in&fringilla=faucibus&rhoncus=orci&mauris=luctus&enim=et&leo=ultrices&rhoncus=posuere&sed=cubilia&vestibulum=curae&sit=donec&amet=pharetra&cursus=magna&id=vestibulum&turpis=aliquet&integer=ultrices&aliquet=erat&massa=tortor&id=sollicitudin&lobortis=mi&convallis=sit&tortor=amet&risus=lobortis&dapibus=sapien&augue=sapien&vel=non&accumsan=mi&tellus=integer&nisi=ac&eu=neque&orci=duis&mauris=bibendum&lacinia=morbi&sapien=non&quis=quam&libero=nec&nullam=dui&sit=luctus&amet=rutrum&turpis=nulla&elementum=tellus&ligula=in&vehicula=sagittis&consequat=dui&morbi=vel&a=nisl&ipsum=duis"
+  }]
+  return (
+    <div className="mt-20">
+      <h1 className="text-center text-accent6 text-2xl">Available Apis</h1>
+      <div className="flex justify-between flex-wrap available-apis">
+          {
+            mockApis.map(item => <AvailableApiCard data ={item}/>)
+          }
+      </div>
+    </div>
+  );
+}

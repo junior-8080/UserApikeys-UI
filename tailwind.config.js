@@ -7,7 +7,9 @@ module.exports = {
         accent:'#f2cc8f',
         accent2:'#f8edeb',
         accent3:'#CC8800',
-        accent4:'#19647E'
+        accent4:'#19647E',
+        accent5:'#091F42',
+        accent6:"#091f42"
         
       },
     },
