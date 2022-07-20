@@ -1,5 +1,5 @@
-import React from 'react'
-import { Route,Navigate } from 'react-router-dom';
+import React from 'react';
+import { Navigate } from 'react-router-dom';
 
 export default function ProtectedRoutes({children}) {
   const isLoggedIn = localStorage.getItem('my_api_isLoggedIn') || false;

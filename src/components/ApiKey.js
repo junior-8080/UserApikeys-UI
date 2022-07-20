@@ -2,9 +2,9 @@ import { Button } from "antd";
 import React, { useState } from "react";
 import { openNotification } from "../redux/actions/userAction";
 
-export default function ApiKey(props) {
-  const [keyCopy, setKeyCopy] = useState(props.apiKey);
-  const [isHidden, setHidden] = useState(true);
+export default function ApiKey(props) { // eslint-disable-next-line
+  const [keyCopy, setKeyCopy] = useState(props.apiKey); // eslint-disable-next-line
+  const [isHidden, setHidden] = useState(true);  
   const copyApiKey = () => {
     navigator.clipboard.writeText(keyCopy);
    openNotification("Copied")

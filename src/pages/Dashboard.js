@@ -1,15 +1,15 @@
 import React, { useEffect } from "react";
-import ApiKeys from "../components/ApiKeys";
 import { connect, useDispatch } from "react-redux";
-import { fetchUser } from "../redux/actions/userAction";
+import ApiKeys from "../components/ApiKeys";
+import AvailableApis from "../components/AvailableApis";
 import { Navbar } from "../components/Navbar";
 import Profile from "../components/Profile";
-import AvailableApis from "../components/AvailableApis";
+import { fetchUser } from "../redux/actions/userAction";
 
 function Dashboard(props) {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchUser());
+    dispatch(fetchUser());  // eslint-disable-next-line
   }, []);
   return (
     <>

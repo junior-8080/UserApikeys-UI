@@ -1,7 +1,7 @@
 import { Button } from 'antd'
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { Link,useNavigate } from 'react-router-dom'
 import { logoutSuccess } from '../redux/actions/userAction'
 
 
@@ -12,9 +12,12 @@ import { logoutSuccess } from '../redux/actions/userAction'
 
 export const Navbar = ({active_path}) => {
  const dispatch = useDispatch();
+ const navigate = useNavigate()
 
   const handleLogut = () => {
+
       dispatch(logoutSuccess())
+      navigate('/');
   }
   return(
     <div className='flex justify-between p-2 navbar bg-accent'>

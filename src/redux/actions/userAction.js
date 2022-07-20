@@ -1,11 +1,9 @@
 /*
  User Logged In,
 
-
 */
-import { Alert, message, notification } from "antd";
+import { message, notification } from "antd";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 import { config } from "../../config";
 
 export const login = (payload) => {
@@ -45,7 +43,7 @@ export const openNotification = (message) => {
 export function userSigin(data) {
   return async (dispatch, getState) => {
     try {
-      const result = await axios({
+      await axios({
         url: config.apiBaseUrl + "/login",
         method: "POST",
         data: data,

@@ -1,19 +1,19 @@
-import 'antd/dist/antd.css';
-import { useSelector } from 'react-redux'
+import 'antd/dist/antd.min.css';
+// import { useSelector } from 'react-redux';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import { Routes,Route } from 'react-router-dom';
+import ProtectedRoutes from './HOC/ProtectedRoutes';
 import Auth from './pages/Auth';
 import Dashboard from './pages/Dashboard';
-import ProtectedRoutes from './HOC/ProtectedRoutes';
 
 
 
-const selectLogin = state => state.user;
+// const selectLogin = state => state.user;
 
 
 function App() {
 
-  const user =  useSelector(selectLogin);
+  // const user =  useSelector(selectLogin);
   return (
     <div>
       <Routes>

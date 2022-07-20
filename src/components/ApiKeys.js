@@ -15,7 +15,6 @@ function ApiKeys({keys}) {
 }
 
 const mapStateProps = state => {
-  console.log(state)
 }
 
 export default connect(mapStateProps)(ApiKeys)
