@@ -25,7 +25,7 @@ export const Navbar = ({active_path}) => {
          <h3 className='text-lg font-bold'>🤖{" "}My Apis</h3>
       </div>
       <div>
-       { active_path === '/'? <ul className='flex px-2'>
+       { active_path === '/'? <ul className='flex px-2 navbar-items'>
           <li className='p  mr-3'><Link to={"/signup"}><i className='fa fa-twitter text-black text-lg'></i></Link></li>
           <li className='p  mr-3'><Link to={"/signup"}><i className='fa fa-linkedin text-black text-lg'></i></Link></li>
           <li className='p  mr-3'><Link to={"/signup"}><i className='fa fa-facebook text-black text-lg'></i></Link></li>

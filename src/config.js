@@ -1,4 +1,4 @@
 export const config  = {
- apiBaseUrl : 'http://localhost:3001/v1/auth'
+ apiBaseUrl :  process.env.REACT_APP_API_BASE_URL|| 'http://localhost:3001/v1/auth' 
 }
 
