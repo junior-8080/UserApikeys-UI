@@ -10,10 +10,11 @@ import { SignUpForm } from "../components/SignUpForm";
  * @author
  * @function Auth
  **/
+ const loginModes = [{text:'Google',icon:"fa fa-google",notAvailable:false},{text:'Facebook',icon:"fa fa-facebook",notAvailable:true},{text:'Twitter',icon:"fa fa-twitter",notAvailable:true}].map((item) => (
+  <LoginType text={item.text} icon={item.icon} key={item.text.toLowerCase()} notAvailable={item.notAvailable} />
+));
+
 const Auth = (props) => {
-  const loginModes = [{text:'Google',icon:"fa fa-google",notAvailable:false},{text:'Facebook',icon:"fa fa-facebook",notAvailable:true},{text:'Twitter',icon:"fa fa-twitter",notAvailable:true}].map((item) => (
-    <LoginType text={item.text} icon={item.icon} key={item.text.toLowerCase()} notAvailable={item.notAvailable} />
-  ));
   const [authState,setAuthState] = useState('login');
   if(props.isLoggedIn){
    return <Navigate to="/dashboard"  />

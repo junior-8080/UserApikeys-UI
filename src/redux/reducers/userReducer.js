@@ -1,3 +1,4 @@
+import { removeItemLocalStorage, setLocalStorage } from "../../utils";
 
 const initialState = {
   isLoggedIn: false,
@@ -7,12 +8,14 @@ const initialState = {
 export default function userReducer(state = initialState, action) {
   switch (action.type) {
     case "LOGIN_SUCCESS":
-      localStorage.setItem('my_api_isLoggedIn',action.payload)
-      return { ...state, isLoggedIn: action.payload };
+      setLocalStorage('token',action.payload);
+      setLocalStorage('isLoggedIn',true);
+      return { ...state, isLoggedIn: true};
     case "ACCOUNT_FETCH_SUCCESS":
       return {...state,userData:action.payload}
     case "LOGOUT":
-      localStorage.removeItem('my_api_isLoggedIn');
+      removeItemLocalStorage('isLoggedIn');
+      removeItemLocalStorage('token')
       return {...state, isLoggedIn:false}
     default:
       return state;

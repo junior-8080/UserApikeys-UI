@@ -9,7 +9,7 @@ import { fetchUser } from "../redux/actions/userAction";
 function Dashboard(props) {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchUser());  // eslint-disable-next-line
+    dispatch(fetchUser());   // eslint-disable-next-line
   }, []);
   return (
     <>
