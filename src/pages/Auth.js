@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { Navigate } from "react-router-dom";
 import { LoginType } from "../components/LoginType";
 import { Navbar } from "../components/Navbar";
-import { SignInForm } from "../components/SigInForm";
+import  SignInForm  from "../components/SigInForm";
 import { SignUpForm } from "../components/SignUpForm";
 
 /**

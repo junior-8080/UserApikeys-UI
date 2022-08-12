@@ -21,6 +21,12 @@ export const loginSuccess = (token) => {
   };
 };
 
+export const isLoggingIn = (payload) => {
+  return {
+    type:"IS_LOGGING_IN",
+    payload: payload
+  }
+}
 export const accountDetails = (payload) => {
   return {
     type: "ACCOUNT_FETCH_SUCCESS",
@@ -44,6 +50,7 @@ export const openNotification = (message) => {
 export function userSigin(data) {
   return async (dispatch, getState) => {
     try {
+      dispatch(isLoggingIn(true))
       let response = await axios({
         url: config.apiBaseUrl + "/login",
         method: "POST",
@@ -57,6 +64,8 @@ export function userSigin(data) {
       } else {
         openNotification("Something  went wrong");
       }
+    }finally{
+      dispatch(isLoggingIn(false))
     }
   };
 }

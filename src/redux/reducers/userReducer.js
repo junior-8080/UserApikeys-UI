@@ -2,6 +2,7 @@ import { removeItemLocalStorage, setLocalStorage } from "../../utils";
 
 const initialState = {
   isLoggedIn: false,
+  isLoggingIn: false,
   userData: {}
 };
 
@@ -17,6 +18,8 @@ export default function userReducer(state = initialState, action) {
       removeItemLocalStorage('isLoggedIn');
       removeItemLocalStorage('token')
       return {...state, isLoggedIn:false}
+    case "IS_LOGGING_IN":
+       return {...state,isLoggingIn:action.payload}
     default:
       return state;
   }
