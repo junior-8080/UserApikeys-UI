@@ -25,8 +25,6 @@ const loginModes = [
 ));
 
 const Auth = (props) => {
-  // const [authState,setAuthState] = useState('login');
-  console.log(props);
   const dispatch = useDispatch();
   if (props.isLoggedIn) {
     return <Navigate to="/dashboard" />;
