@@ -3,6 +3,7 @@ import { removeItemLocalStorage, setLocalStorage } from "../../utils";
 const initialState = {
   isLoggedIn: false,
   isLoggingIn: false,
+  authPage:"login",
   userData: {}
 };
 
@@ -20,6 +21,8 @@ export default function userReducer(state = initialState, action) {
       return {...state, isLoggedIn:false}
     case "IS_LOGGING_IN":
        return {...state,isLoggingIn:action.payload}
+    case "AUTH_PAGE":
+      return {...state,authPage:action.payload}
     default:
       return state;
   }

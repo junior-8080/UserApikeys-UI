@@ -7,6 +7,7 @@ import { getItemLocalStorage } from "../utils";
 const preloadedState = {
     user: {
         isLoggedIn: getItemLocalStorage('isLoggedIn'),
+        authPage:"login",
     }
 }
 

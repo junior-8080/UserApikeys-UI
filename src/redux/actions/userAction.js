@@ -41,6 +41,13 @@ export const logoutSuccess = () => {
   };
 };
 
+export const authPage = (page) => {
+  return {
+    type: "AUTH_PAGE",
+    payload: page,
+  };
+};
+
 export const openNotification = (message) => {
   notification.open({
     message: message,
@@ -78,12 +85,12 @@ export function userSigup(data) {
         method: "POST",
         data: data,
       });
-      if (response.status === 200 && response.data.status) {
-        const payload = {
-          email: data.email,
-          password: data.password,
-        };
-        dispatch(userSigin(payload));
+      if (response.status === 200) {
+        // const payload = {
+        //   email: data.email,
+        //   password: data.password,
+        // };
+        dispatch(authPage("login"));
       }
     } catch (error) {
       const statusCode = error.statusCode;
