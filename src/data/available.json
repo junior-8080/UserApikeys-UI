@@ -1,7 +1,7 @@
 [{
- "name": "Voyatouch",
- "summary": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
- "docs": "https://google.de/mi/pede/malesuada/in/imperdiet/et/commodo.jpg?ut=ipsum&ultrices=praesent&vel=blandit&augue=lacinia&vestibulum=erat&ante=vestibulum&ipsum=sed&primis=magna&in=at&faucibus=nunc&orci=commodo&luctus=placerat&et=praesent&ultrices=blandit&posuere=nam&cubilia=nulla&curae=integer&donec=pede&pharetra=justo&magna=lacinia&vestibulum=eget&aliquet=tincidunt&ultrices=eget&erat=tempus&tortor=vel&sollicitudin=pede&mi=morbi&sit=porttitor&amet=lorem&lobortis=id&sapien=ligula&sapien=suspendisse&non=ornare&mi=consequat&integer=lectus&ac=in&neque=est&duis=risus&bibendum=auctor&morbi=sed&non=tristique&quam=in&nec=tempus&dui=sit&luctus=amet&rutrum=sem&nulla=fusce&tellus=consequat&in=nulla&sagittis=nisl&dui=nunc&vel=nisl&nisl=duis&duis=bibendum&ac=felis&nibh=sed&fusce=interdum&lacus=venenatis&purus=turpis&aliquet=enim&at=blandit&feugiat=mi&non=in&pretium=porttitor&quis=pede"
+ "name": "User Authentication.",
+ "summary": "Save your users and authenticate them without writing any backend.",
+ "docs": "https://user-authenticationv1.herokuapp.com/api-docs"
 }, {
  "name": "Zoolab",
  "summary": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. .",
